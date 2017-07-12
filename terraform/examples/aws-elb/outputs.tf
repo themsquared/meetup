@@ -1,3 +1,3 @@
 output "address" {
-  value = "${aws_elb.tf_demo.dns_name}"
+  value = "${aws_elb.tf-demo.dns_name}"
 }
