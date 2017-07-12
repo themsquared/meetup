@@ -7,13 +7,13 @@ resource "aws_vpc" "tf-demo" {
 }
 
 resource "aws_internet_gateway" "tf-demo" {
-  vpc_id = "${aws_vpc.tf_demo.id}"
+  vpc_id = "${aws_vpc.tf-demo.id}"
 }
 
 resource "aws_route" "internet_access" {
   route_table_id         = "${aws_vpc.tf-demo.main_route_table_id}"
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = "${aws_internet_gateway.tf_demo.id}"
+  gateway_id             = "${aws_internet_gateway.tf-demo.id}"
 }
 
 resource "aws_subnet" "tf-demo" {
@@ -25,7 +25,7 @@ resource "aws_subnet" "tf-demo" {
 resource "aws_security_group" "tf-elb-sg" {
   name        = "Terraform SG for ELB"
   description = "ELB Security Group for terraform"
-  vpc_id      = "${aws_vpc.tf_demo.id}"
+  vpc_id      = "${aws_vpc.tf-demo.id}"
 
   # HTTP access from anywhere
   ingress {
@@ -47,7 +47,7 @@ resource "aws_security_group" "tf-elb-sg" {
 resource "aws_security_group" "tf-vpc-sg" {
   name        = "Terraform SG for VPC"
   description = "VPC Security Group for terraform"
-  vpc_id      = "${aws_vpc.tf_demo.id}"
+  vpc_id      = "${aws_vpc.tf-demo.id}"
 
   # HTTP access from the VPC
   ingress {
