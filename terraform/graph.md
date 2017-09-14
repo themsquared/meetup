@@ -1,4 +1,4 @@
-# How to run terraform grap to get a .png file
+# How to run terraform graph to get a .png file
 
 There is a dependency to perform this step you will need to install graphviz.  
 
