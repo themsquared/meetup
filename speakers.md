@@ -4,7 +4,7 @@ Interested in speaking?  Please submit a pull request to this page with your nam
 
 ## Submissions
 
-Elyssa Emrich - elyssa@elastic.o. Our team is happy to give a talk on the Elastic Stack for the Dec. 13 meetup
+Elyssa Emrich - elyssa@elastic.co. Our team is happy to give a talk on the Elastic Stack for the Dec. 13 meetup
 
 **Submission 1:** 
 The Elastic Stack
